@@ -94,7 +94,7 @@ export default {
     },
   },
   generate: {
-    // fallback: true,
+    fallback: true, // Fall back to custom 404 page instead of Netlify's
     routes: async function() {
       const { photoSlugs, pageSlugs } = await sanityClient.fetch(`{
         'photoSlugs': *[_type == 'photo'].slug.current,
